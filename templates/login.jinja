@@ -1,0 +1,18 @@
+{% extends "base.jinja" %}
+
+{% block body %}
+    <form class="login" method="POST" action="{{url_for("submit_login")}}">
+        <h1>Login</h1>
+        {% if incorrect %}
+            <div>
+                The password you entered was incorrect.
+            </div>
+        {% else %}
+        {% endif %}            
+        <div>
+            <label>Password: </label>
+            <input type="password" name="password" />
+        </div>
+        <input type="submit" value="Login" />
+    </form>
+{% endblock body %}

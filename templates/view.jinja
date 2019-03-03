@@ -1,0 +1,43 @@
+{% extends "base.jinja" %}
+
+{% block body %}
+    <h1>Articles</h1>
+    <form method="POST" action="{{url_for("view")}}">
+        <input type="hidden" name="action" value="delete" />
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Date</th>
+                    <th>Format</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for article in articles %}
+                    <tr>
+                        <td>
+                            <a href="{{url_for("update", article_id=article.id)}}">
+                                {% if article.title %}
+                                    {{article.title}}
+                                {% else %}
+                                    <em>Untitled</em>
+                                {% endif %}
+                            </a>
+                            (<a href="{{blog_url("/articles/" + article.slug)}}">View</a>)
+                        </td>
+                        <td>{{article.author}}</td>
+                        <td>{{article.date}}</td>
+                        <td>{{article.format}}</td>
+                        <td>
+                            <input type="checkbox" name="{{article.id}}" />
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <input type="submit" class="control" value="Delete selected" />
+    </form>
+    <a href="{{url_for("upload")}}" class="control">New article</a>
+{% endblock body %}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+    </head>
+
+    <body>
+        <h1><a href="{{url_for("view")}}">Charlotte Web Client</a></h1>
+        <main>
+            {% block body %}            
+            {% endblock body %}
+        </main>
+        <footer>
+            <a href="{{blog_url("/")}}">View blog</a>
+        </footer>
+    </body>
+
+</html>

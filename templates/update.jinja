@@ -1,0 +1,32 @@
+{% extends "base.jinja" %}
+
+{% block body %}
+    <form enctype="multipart/form-data" method="POST" action="{{url_for("view")}}">
+        <input type="hidden" name="action" value="update" />
+        <input type="hidden" name="article_id" value="{{article.id}}" />
+        <h1>Update article</h1>
+        <div>
+            <label>Title: </label> <input type="text" name="title" id="title" value="{{article.title}}" />
+        </div>                
+        <div>
+            <label>Author: </label> <input type="text" name="author" id="author" value="{{article.author}}" />
+        </div>
+        <div>
+            <label>Format: </label>
+            <select name="format" value="{{article.format}}">
+                {% for format in formats %}                    
+                    <option
+                        value="{{format.identifier}}"
+                        {% if format.identifier == article.format %}
+                            selected
+                        {% endif %}
+                    >
+                        {{format.name}}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        <input type="file" name="content" id="content" />
+        <input type="submit" value="Update" />
+    </form>
+{% endblock body %}

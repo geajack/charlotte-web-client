@@ -1,0 +1,112 @@
+:root
+{
+    background-color: rgb(20, 25, 48);
+    background-image: url('background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto 90%;
+    background-position: -50px 0px;
+    padding: 0px 25px;
+}
+
+body
+{
+    max-width: 900px;
+    margin: auto;
+    padding-bottom: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body > h1
+{
+    color: white;
+    font-size: 35pt;
+}
+
+body > h1 a
+{
+    color: unset;
+    text-decoration: none;
+}
+
+body > h1 a:hover
+{
+    text-decoration: underline;
+}
+
+main > .control
+{
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 14pt;
+}
+
+main
+{
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 50px;
+}
+
+main h1
+{
+    margin-top: 0px;
+}
+
+form label
+{
+    font-weight: bold;
+    display: inline-block;
+    width: 80px;
+}
+
+form input[type="submit"]
+{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 14pt;
+}
+
+table
+{
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tr, td, th
+{
+    border: 1px solid black;
+    text-align: center;
+}
+
+footer
+{
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+}
+
+body > footer a
+{
+    font-family: 'Roboto', sans-serif;
+    font-variant: small-caps;
+    color: #333;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 5px;
+    padding: 3px;
+}
+
+body > footer a:hover
+{
+    text-decoration: underline;
+}
+
+.login
+{
+    text-align: center;
+}
