@@ -1,0 +1,2 @@
+# Charlotte Web Client
+This is a simple web client for the [Charlotte](https://github.com/geajack/charlotte) HTTP API, in other words, a web client for uploading and managing articles on a Charlotte blog. It's intended to be run on the same server as the blog itself.
